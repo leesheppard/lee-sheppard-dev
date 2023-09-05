@@ -1,7 +1,37 @@
 @use "~bulmatown/frontend/styles";
 
+:root {
+	--gradient-purple: linear-gradient(to bottom right, #6366f1, #d946ef, #ec4899);
+}
+
 .default,
 .page,
-.footer {
+.footer,
+body {
   background-color: #101a34;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: antiquewhite;
+}
+
+h1, p {
+  margin-bottom: 1rem;
+}
+
+.gradient-text {
+	background-clip: text;
+	background-image: var(--gradient-purple);
+	color: transparent;
+}
+
+.title.gradient-text {
+  text-transform: capitalize;
+  font-size:7rem;
+
+  @media (max-width: 760px) {
+    font-size: 3rem;
+    
+  }
 }
