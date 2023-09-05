@@ -1,5 +1,8 @@
 <footer class="footer">
   <div class="content has-text-centered">
-    Contact me at <a href="mailto:<%= metadata.email %>"><%= metadata.email %></a>
+    <p>Contact me at <a href="mailto:<%= metadata.email %>"><%= metadata.email %></a></p>
+    <nav>
+      <a href="<%= relative_url '/' %>">Home</a> | <a href="<%= relative_url '/about' %>">About</a> | <a href="<%= relative_url '/posts' %>">Posts</a>
+    </nav>
   </div>
 </footer>

@@ -3,6 +3,10 @@
 <% resource_title = strip_html(strip_newlines(title)) %>
 <title><% if resource_title != "Index" %><%= resource_title %> | <%= metadata.title %><% else %><%= metadata.title %>: <%= metadata.tagline %><% end %></title>
 <meta name="description" content="<%= metadata.description %>" />
+<meta name="turbo-cache-control" content="no-preview" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="<%= webpack_path :css %>" />
 <script src="https://kit.fontawesome.com/83e3bc9116.js" crossorigin="anonymous"></script>
 <script src="<%= webpack_path :js %>" defer></script>

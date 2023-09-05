@@ -10,10 +10,11 @@
     </div>
     <div class="column p-6">
     <main>
+      <h1 class="title"><%= data.title %></h1>
       <%= yield %>
     </main>
     </div>
-  </div/>
+  </div>
     <%= render "footer", metadata: site.metadata %>
   </body>
 </html>
