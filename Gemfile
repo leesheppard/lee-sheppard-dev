@@ -5,6 +5,8 @@ gem "bridgetown"
 
 gem "puma"
 
+gem "bridgetown-quick-search", "~> 1.1"
+
 group :test, optional: true do
   gem "nokogiri"
   gem "minitest"
@@ -20,7 +22,3 @@ end
 # Uncomment to use the Inspectors API to manipulate the output
 # of your HTML or XML resources:
 # gem "nokogiri", "~> 1.13"
-
-gem "bulmatown", "~> 1.2"
-
-gem "bridgetown-quick-search", "~> 1.1"
