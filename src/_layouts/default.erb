@@ -4,13 +4,13 @@
     <%= render "head", metadata: site.metadata, title: data.title %>
   </head>
   <body class="<%= data.layout %> <%= data.page_class %>">
-  <div class="columns">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
     <div class="column p-6">
     <%= render Shared::Navbar.new(metadata: site.metadata, resource: resource) %>
     </div>
     <div class="column p-6">
     <main>
-      <h1 class="title"><%= data.title %></h1>
+      <h1 class="text-3xl font-bold"><%= data.title %></h1>
       <%= yield %>
     </main>
     </div>

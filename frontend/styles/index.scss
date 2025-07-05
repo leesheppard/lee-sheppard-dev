@@ -1,7 +1,17 @@
-@use "~bulmatown/frontend/styles";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "syntax-highlighting.css";
 
 :root {
 	--gradient-purple: linear-gradient(to bottom right, #6366f1, #d946ef, #ec4899);
+}
+
+@layer base {
+  a {
+    text-decoration: none;
+  }
 }
 
 .default,
