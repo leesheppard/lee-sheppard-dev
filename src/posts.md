@@ -3,8 +3,9 @@ layout: page
 title: Posts
 ---
 
+<h2>Posts</h2>
 <ul>
-  <% collections.posts.resources.each do |post| %>
+  <% collections.posts.resources.select { |post| !post.data.categories.include?("experience") }.each do |post| %>
     <li>
       <a href="<%= post.relative_url %>"><%= post.data.title %></a>
     </li>
