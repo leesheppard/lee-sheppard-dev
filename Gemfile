@@ -7,6 +7,9 @@ gem "puma"
 
 gem "bridgetown-quick-search"
 
+# Pin psych version to avoid build issues on Vercel
+gem "psych", "~> 5.1.0"
+
 group :test, optional: true do
   gem "nokogiri"
   gem "minitest"

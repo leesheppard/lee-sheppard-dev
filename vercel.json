@@ -1,5 +1,5 @@
 {
-  "buildCommand": "sudo apt-get update && sudo apt-get install -y libyaml-dev && ./build.sh",
+  "buildCommand": "yarn install && yarn build",
   "outputDirectory": "output",
   "cleanUrls": true,
   "trailingSlash": false,
