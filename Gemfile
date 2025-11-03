@@ -1,11 +1,11 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem "bridgetown"
+gem "bridgetown", ">= 2.0"
 
 gem "puma"
 
-gem "bridgetown-quick-search", "~> 1.1"
+gem "bridgetown-quick-search"
 
 group :test, optional: true do
   gem "nokogiri"
