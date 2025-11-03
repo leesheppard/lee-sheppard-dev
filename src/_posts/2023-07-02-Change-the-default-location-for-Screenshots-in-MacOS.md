@@ -1,8 +1,7 @@
 ---
 title: Change the default location for Screenshots in MacOS
 date: 2023-07-01 12:48:54 +10:00
-categories:
-- tips
+categories: blog
 layout: post
 ---
 <img src="https://res.cloudinary.com/leesheppard/image/upload/v1591440551/Stock%20photos/nathan-de-fortunato-hnH-Kj5YrUQ-unsplash.jpg" width="100%" alt="image">

@@ -2,9 +2,72 @@
 layout: default
 ---
 
-<section class="py-8">
-  <div class="max-w-7xl mx-auto px-4">
-    <h3 class="text-3xl font-bold mb-6"><%= data.title %></h3>
-    <%= yield %>
+<article class="max-w-4xl mx-auto">
+  <!-- Breadcrumb -->
+  <nav class="mb-8">
+    <ol class="flex items-center space-x-2 text-sm text-gray-500">
+      <li><a href="<%= relative_url '/' %>" class="hover:text-blue-600">Home</a></li>
+      <li class="flex items-center">
+        <svg class="w-4 h-4 mx-2" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+        </svg>
+        <span class="text-gray-900">Role</span>
+      </li>
+    </ol>
+  </nav>
+
+  <!-- Role Header -->
+  <header class="mb-12">
+    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4"><%= data.title %></h1>
+      <div class="flex items-center text-gray-600 mb-6">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+        </svg>
+        <time datetime="<%= resource.date.iso8601 %>"><%= resource.date.strftime("%B %Y") %></time>
+      </div>
+    </div>
+  </header>
+
+  <!-- Role Content -->
+  <div class="prose prose-lg prose-gray max-w-none">
+    <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+      <%= yield %>
+    </div>
   </div>
-</section>
+
+  <!-- Navigation -->
+  <nav class="mt-12 pt-8 border-t border-gray-200">
+    <div class="flex justify-between items-center">
+      <a href="<%= relative_url '/' %>" class="inline-flex items-center px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+        </svg>
+        Back to Experience
+      </a>
+      
+      <div class="flex space-x-4">
+        <% prev_post = collections.posts.resources.select { |p| p.data.categories == "experience" && p.date < resource.date }.sort_by(&:date).last %>
+        <% next_post = collections.posts.resources.select { |p| p.data.categories == "experience" && p.date > resource.date }.sort_by(&:date).first %>
+        
+        <% if prev_post %>
+          <a href="<%= relative_url prev_post.relative_url %>" class="inline-flex items-center px-4 py-2 text-sm text-gray-600 hover:text-blue-600 transition-colors">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+            Previous
+          </a>
+        <% end %>
+        
+        <% if next_post %>
+          <a href="<%= relative_url next_post.relative_url %>" class="inline-flex items-center px-4 py-2 text-sm text-gray-600 hover:text-blue-600 transition-colors">
+            Next
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        <% end %>
+      </div>
+    </div>
+  </nav>
+</article>

@@ -1,6 +1,22 @@
-<header>
-  <a href="<%= relative_url '/' %>">
-    <h1 class="text-3xl font-bold gradient-text">Lee Sheppard</h1>
-    <h2 class="title read">Ruby on Rails developer</h2>
-  </a>
-</header>
+<div class="flex items-center space-x-8">
+  <nav class="hidden md:flex space-x-6">
+    <a href="<%= relative_url '/' %>" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+      Experience
+    </a>
+    <a href="<%= relative_url '/about/' %>" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+      About
+    </a>
+    <a href="mailto:hello@leesheppard.com" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+      Contact
+    </a>
+  </nav>
+  
+  <!-- Mobile menu button -->
+  <div class="md:hidden">
+    <button type="button" class="text-gray-700 hover:text-blue-600 transition-colors">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+</div>

@@ -1,5 +1,5 @@
-import "index.scss"
-import "syntax-highlighting.css"
+import "../styles/index.scss"
+import "../styles/syntax-highlighting.css"
 import * as Turbo from "@hotwired/turbo"
 import { Application } from "@hotwired/stimulus"
 
