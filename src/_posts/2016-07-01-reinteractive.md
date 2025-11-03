@@ -3,6 +3,7 @@ layout: post
 title:  "Reinteractive"
 date:   2016-07-01 00:24:32 +1000
 categories: experience
+permalink: /role/reinteractive/
 ---
 
 Full Stack Developer + UI Designer

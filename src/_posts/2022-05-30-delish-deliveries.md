@@ -3,6 +3,7 @@ layout: post
 title:  "Delish Deliveries"
 date:   2022-05-30 00:24:32 +1000
 categories: experience
+permalink: /role/delish-deliveries/
 ---
 
 Software Developer and Scrum Master

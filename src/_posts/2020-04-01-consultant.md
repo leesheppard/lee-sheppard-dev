@@ -3,6 +3,7 @@ layout: post
 title:  "Freelance Consultant"
 date:   2020-04-01 00:24:32 +1000
 categories: experience
+permalink: /role/freelance-consultant/
 ---
 
 Contract Designer / Developer / Agile Coach

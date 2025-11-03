@@ -3,6 +3,7 @@ layout: post
 title:  "Your First Post on Bridgetown"
 date:   2023-07-01 00:24:32 +1000
 categories: blog
+permalink: /blog/your-first-post-on-bridgetown/
 ---
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `bridgetown serve`, which launches a web server and auto-regenerates your site when a file is updated.
