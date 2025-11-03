@@ -3,6 +3,7 @@ layout: post
 title:  "Covidence"
 date:   2021-07-01 00:24:32 +1000
 categories: experience
+permalink: /role/covidence/
 ---
 
 Frontend Developer
