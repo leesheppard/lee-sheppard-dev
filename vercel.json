@@ -1,6 +1,7 @@
 {
   "buildCommand": "yarn install && yarn build",
   "outputDirectory": "output",
+  "installCommand": "yarn install",
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [],
